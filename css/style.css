@@ -1,15 +1,23 @@
 *
 {
-	box-sizing : border-box;
+	box-sizing : inherit;
 	margin     : 0;
 	padding    : 0;
+	}
+
+body
+{
+	font-family: 'Roboto Light', SansSerif;
+	font-size: 85.8%;
+	background: white;
+	color: black;
+	text-shadow: 1px 2px 2px rgba(0,0,0,20%);
 	}
 
 html
 {
 	font-family : "Roboto Light", sans-serif;
 	font-size   : 65.8%;
-	width       : 100%;
 	}
 
 .main__bg
@@ -20,7 +28,6 @@ html
 	background-position : top;
 	backface-visibility : hidden;
 	}
-
 .nav_bar
 {
 	display        : flex;
@@ -31,10 +38,9 @@ html
 /*brand name from top left side*/
 .logo_link
 {
-	font-size           : 1.9rem;
 	font-weight         : 500;
 	position            : absolute;
-	display             : block;
+	display: flex;
 	height              : auto;
 	margin-top          : 3vh;
 	margin-left         : 3%;
@@ -52,8 +58,9 @@ html
 	left            : 30%;
 	display         : flex;
 	align-content   : center;
+	justify-content: center;
 	align-items     : center;
-	width           : 70rem;
+	width           : 50rem;
 	text-align      : center;
 	text-decoration : none;
 	/*transform: translateY(50%);*/
@@ -62,7 +69,7 @@ html
 /*links from the nav bar*/
 .a__menu, li
 {
-	font-size       : 1.5rem;
+	font-size       : 2.1rem;
 	position        : relative;
 	display         : inline-flex;
 	align-content   : center;
@@ -73,32 +80,6 @@ html
 	list-style-type : none;
 	text-decoration : none;
 	color           : white;
-	}
-
-@media only screen and (max-width : 90rem)
-{
-	html
-	{
-		font-size : 40%;
-		}
-	}
-
-@media only screen and (max-width : 50rem)
-{
-	.logo_link
-	{
-		font-size       : 1.1rem;
-		font-weight     : 200;
-		position        : absolute;
-		top             : 5%;
-		display         : block;
-		margin-top      : 2%;
-		margin-left     : 3%;
-		text-align      : left;
-		text-decoration : none;
-		color           : white;
-		border          : none;
-		}
 	}
 
 .featured_logo
@@ -148,12 +129,10 @@ html
 .me__subtag
 {
 	font-size        : 2rem;
-	font-weight      : lighter;
-	left             : 0;
+	font-weight      : 200;
 	display          : flex;
 	align-items      : start;
 	flex-direction   : column;
-	justify-content  : center;
 	width            : 100%;
 	height           : 3vh;
 	margin-top       : 4vh;
@@ -162,16 +141,6 @@ html
 	border           : rgba(28, 28, 28, 0.5) solid .1rem;
 	background-color : rgba(28, 28, 28, 0.1);
 	}
-
-/* first goes the article container */
-/* image_left */
-/* img */
-
-/* inside__article__text */
-/* me_inside__article */
-
-/* button */
-
 
 .article__container
 {
@@ -192,11 +161,6 @@ html
 	width: 100%;
 	height: 100%;
 	}
-/* #article__span1 */
-/* { */
-/* 	display         : flex; */
-/* 	width           : 30%; */
-/* 	} */
 i{
 	font-weight: 500;
 	}
@@ -204,7 +168,6 @@ i{
 .text__article{
 	text-align: left;
 	padding-left: 5%;
-	font-family: "Roboto Light" SansSerif;
 	}
 
 /*button*/
@@ -221,26 +184,23 @@ button
 {
 	font-family      : "Roboto Light", serif;
 	font-size        : 2.0rem;
-	width            : 100%;
-	padding-top      : 12%;
-	padding-bottom   : 12%;
+	padding          : 1rem;
 	color            : white;
 	border           : rgba(0, 0, 0, 0.3) .1rem solid;
 	background-color : rgb(226, 183, 49);
 	}
-
-/* 		footer */
 
 .footer
 {
 	display: flex;
 	background-color: black;
 	color: white;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: 50vh;
 	flex-direction: row;
 	}
+
 .left-side
 {
 	display: flex;
@@ -257,17 +217,26 @@ button
 
 .right-side
 {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	width: 80%;
+	
+	display: inline-flex;
+	justify-content: left;
+	text-align: left;
+	width: 100%;
 	}
 .column
 {
+	
 	width: 100%;
 	}
-.list li a{
+.list
+{
+	width: 100%;
+	}
+
+.list a{
 	color: white;
+	width: 100%;
+	font-size: 1.8rem;
 	text-decoration: none;
 	text-transform: none;
 	}
@@ -275,8 +244,49 @@ button
 .info
 {
 	display: flex;
-	justify-content: center;
-	padding-top: 50%;
-	transform: translateY(-50%);
-	font-size: 3.6rem;
+	justify-content: left;
+	margin-top: 20%;
+	font-size: 4.6rem;
+	}
+
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	}
+
+.icon-link {
+	display: inline-block;
+	height: 100%;
+	}
+
+.icon {
+	vertical-align: middle;
+	margin-right: 10px;
+	}
+
+.text {
+	vertical-align: middle;
+	}
+
+@media only screen and (max-width: 900px) {
+	.nav__links {
+		position: absolute;
+		display:inline-list-item; /* Add the display property (e.g., flex, inline-flex, grid, etc.) */
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		text-decoration: none;
+		/* transform: translateY(50%); */ /* This line is commented out to avoid unintended effects */
+		}
+	}
+@media only screen and (max-width: 600px)
+{
+	html
+	{
+		font-family : "Roboto Light", sans-serif;
+		font-size   : 25.8%;
+		}
 	}
